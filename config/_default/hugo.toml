@@ -1,0 +1,33 @@
+baseURL = "https://ucstr.org/"
+languageCode = "en-us"
+title = "UCSTR"
+theme = "congo"
+
+paginate = 10
+enableRobotsTXT = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  colorScheme = "slate"
+  defaultAppearance = "dark"
+  showAppearanceSwitcher = true
+  description = "United Council for Science, Technology and Research — advocating for reform in scientific research and academia in India"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    pageRef = "about"
+    weight = 2
+
+  [[menu.main]]
+    name = "Posts"
+    pageRef = "posts"
+    weight = 3
