@@ -1,0 +1,26 @@
+baseURL = 'https://ucstr.org/'
+languageCode = 'en-us'
+title = 'UCSTR'
+theme = 'PaperMod'
+
+[params]
+  description = "United Council for Science, Technology and Research — advocating for reform in scientific research and academia in India"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 3
