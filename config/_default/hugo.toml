@@ -35,3 +35,6 @@ enableRobotsTXT = true
     name = "About"
     pageRef = "about"
     weight = 6
+
+    [params.footer]
+  showThemeAttribution = false
