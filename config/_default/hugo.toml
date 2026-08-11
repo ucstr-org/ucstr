@@ -35,6 +35,10 @@ enableRobotsTXT = true
     name = "About"
     pageRef = "about"
     weight = 6
+  [[menu.main]]
+  name = "Share Your Story"
+  pageRef = "share-your-story"
+  weight = 7
 
     [params.footer]
   showThemeAttribution = false

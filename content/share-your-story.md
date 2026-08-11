@@ -1,8 +1,3 @@
-+++
-date = '2026-08-11T18:11:58Z'
-draft = true
-title = 'Share Your Story'
-+++
 ---
 title: "Share Your Story"
 description: "Securely and anonymously report academic nepotism and toxic mentorship."
