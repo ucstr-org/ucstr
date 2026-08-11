@@ -10,24 +10,28 @@ enableRobotsTXT = true
   category = "categories"
   tag = "tags"
 
-[params]
-  colorScheme = "slate"
-  defaultAppearance = "dark"
-  showAppearanceSwitcher = true
-  description = "United Council for Science, Technology and Research — advocating for reform in scientific research and academia in India"
-
 [menu]
   [[menu.main]]
     name = "Home"
     pageRef = "/"
     weight = 1
-
+  [[menu.main]]
+    name = "Research culture"
+    pageRef = "categories/research"
+    weight = 2
+  [[menu.main]]
+    name = "Policy watch"
+    pageRef = "categories/policy"
+    weight = 3
+  [[menu.main]]
+    name = "Voices"
+    pageRef = "categories/voices"
+    weight = 4
+  [[menu.main]]
+    name = "Resources"
+    pageRef = "categories/resources"
+    weight = 5
   [[menu.main]]
     name = "About"
     pageRef = "about"
-    weight = 2
-
-  [[menu.main]]
-    name = "Posts"
-    pageRef = "posts"
-    weight = 3
+    weight = 6
