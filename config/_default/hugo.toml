@@ -38,3 +38,4 @@ enableRobotsTXT = true
 
     [params.footer]
   showThemeAttribution = false
+  customText = "United Council for Science, Technology and Research"
