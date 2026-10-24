@@ -23,20 +23,16 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-
       - name: Build with Hugo
-        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-
+        run: hugo --minify --buildFuture --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

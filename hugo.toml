@@ -1,0 +1,42 @@
+baseURL = "https://ucstr.org/"
+languageCode = "en-us"
+title = "UCSTR India"
+theme = "PaperMod"
+
+[params]
+  description = "UCSTR: Documenting research culture and systemic issues."
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowBreadCrumbs = true
+  disableFooter = false
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Policy & Reform"
+    url = "/categories/policy/"
+    weight = 3
+  [[menu.main]]
+    name = "Voices & Stories"
+    url = "/categories/voices/"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+  [[menu.main]]
+    name = "Support Us"
+    url = "/support/"
+    weight = 6
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
