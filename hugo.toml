@@ -1,10 +1,10 @@
 baseURL = "https://ucstr.org/"
 languageCode = "en-us"
-title = "UCSTR India"
+title = "UCSTR"
 theme = "PaperMod"
 
 [params]
-  description = "UCSTR: Documenting research culture and systemic issues."
+  description = "UCSTR: Documenting global science, research culture, and systemic reform."
   ShowReadingTime = true
   ShowShareButtons = true
   ShowBreadCrumbs = true
