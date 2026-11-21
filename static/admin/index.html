@@ -12,13 +12,25 @@
       window.addEventListener('DOMContentLoaded', () => {
         if (window.CMS) {
           window.CMS.registerEditorComponent({
+            id: "callout",
+            label: "Key Note Box",
+            fields: [{ name: "text", label: "Note Text", widget: "text" }],
+            pattern: /<div class="ucstr-callout">(.*?)<\/div>/s,
+            fromBlock: (match) => ({ text: match[1] }),
+            toBlock: (obj) =>
+              `<div class="ucstr-callout" style="padding: 16px 20px; margin: 20px 0; border-left: 4px solid #6366f1; border-radius: 8px; background: rgba(99, 102, 241, 0.08); clear: both;">${obj.text}</div>`,
+            toPreview: (obj) =>
+              `<div style="padding: 14px 18px; border-left: 4px solid #6366f1; background: rgba(99, 102, 241, 0.08); border-radius: 8px;">${obj.text}</div>`
+          });
+
+          window.CMS.registerEditorComponent({
             id: "youtube",
             label: "YouTube Video",
-            fields: [{ name: "id", label: "YouTube Video ID (e.g. dQw4w9WgXcQ)", widget: "string" }],
+            fields: [{ name: "id", label: "YouTube Video ID", widget: "string" }],
             pattern: /youtube\.com\/embed\/([a-zA-Z0-9_-]+)/,
             fromBlock: (match) => ({ id: match[1] }),
             toBlock: (obj) =>
-              `<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; margin: 24px 0; box-shadow: 0 6px 20px rgba(0,0,0,0.25); clear: both;"><iframe src="https://www.youtube.com/embed/${obj.id}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe></div>`,
+              `<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; margin: 24px 0; clear: both;"><iframe src="https://www.youtube.com/embed/${obj.id}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe></div>`,
             toPreview: (obj) =>
               `<img src="https://img.youtube.com/vi/${obj.id}/hqdefault.jpg" alt="YouTube Video" style="max-width: 100%; border-radius: 12px;" />`
           });
